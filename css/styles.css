@@ -19,6 +19,19 @@ body.dark-mode {
   color: #fff; /* Text color for dark mode */
 }
 
+/* Navbar */
+.navbar {
+  padding: 10px 20px; /* Add some padding */
+}
+
+.navbar-brand {
+  font-size: 1.5em; /* Adjust brand size */
+}
+
+.nav-link {
+  font-size: 1.1em; /* Adjust link size */
+}
+
 /* Hero Section */
 #hero {
   height: 100vh; /* Full height of the viewport */
@@ -59,4 +72,54 @@ footer {
 
 footer p {
   margin: 5px 0; /* Spacing for footer paragraphs */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .name {
+    font-size: 5em; /* Reduce size for medium screens */
+  }
+  .role {
+    font-size: 2em; /* Reduce role size for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .name {
+    font-size: 4em; /* Reduce size for small screens */
+  }
+  .role {
+    font-size: 1.5em; /* Further reduce role size */
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack nav links vertically on small screens */
+    align-items: flex-start; /* Align to start */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px 10px; /* Adjust navbar padding for smaller screens */
+  }
+
+  .name {
+    font-size: 3.5em; /* Further reduce name size */
+  }
+  .role {
+    font-size: 1.2em; /* Further reduce role size */
+  }
+
+  footer {
+    font-size: 1em; /* Smaller footer text */
+  }
+}
+
+@media (max-width: 576px) {
+  .name {
+    font-size: 3em; /* Further reduce name size */
+  }
+  .role {
+    font-size: 1em; /* Further reduce role size */
+  }
 }
