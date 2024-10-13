@@ -1,0 +1,62 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff; /* Default text color for light mode */
+  line-height: 1.6;
+  background-color: #f8f9fa; /* Light background color */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for mode change */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background color */
+  color: #fff; /* Text color for dark mode */
+}
+
+/* Hero Section */
+#hero {
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('../images/ai.jpg'); /* Set your local image as the background */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Fixed attachment for scrolling effect */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the background */
+}
+
+.name {
+  font-size: 6em;
+  margin-bottom: 15px;
+  color: #ff6347; /* Your desired color for the name */
+}
+
+.role {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center; /* Center the text in the footer */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 1.2em; /* Increased footer text size */
+}
+
+footer p {
+  margin: 5px 0; /* Spacing for footer paragraphs */
+}
