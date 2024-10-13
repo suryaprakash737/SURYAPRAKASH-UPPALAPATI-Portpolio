@@ -1,3 +1,17 @@
+/* Light Theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --switch-bg: #7bb9f5;
+  --switch-checked-bg: #476173;
+}
+
+/* Dark Theme */
+body.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+}
+
 /* General Styles */
 * {
   margin: 0;
@@ -7,16 +21,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #fff; /* Default text color for light mode */
+  color: var(--text-color); /* Use custom properties */
+  background-color: var(--bg-color); /* Use custom properties */
   line-height: 1.6;
-  background-color: #f8f9fa; /* Light background color */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for mode change */
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #121212; /* Dark background color */
-  color: #fff; /* Text color for dark mode */
 }
 
 /* Navbar */
@@ -30,6 +38,62 @@ body.dark-mode {
 
 .nav-link {
   font-size: 1.1em; /* Adjust link size */
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  margin-right: 15px; /* Spacing before other nav items */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--switch-checked-bg);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+  background-color: transparent;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  box-shadow: inset -5px -3px 0 #d8e9ef;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-bg);
+  transition: 0.4s;
+  border-radius: 20px;
+  box-shadow: 0 0 0.25em rgba(67, 71, 85, 0.27), 0.2px 0.2em 24px 0 rgba(1, 29, 77, 0.15);
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: yellow; /* Change to your preferred color */
+  transition: 0.4s;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 16px;
 }
 
 /* Hero Section */
@@ -53,7 +117,7 @@ body.dark-mode {
 .name {
   font-size: 6em;
   margin-bottom: 15px;
-  color: #ff6347; /* Your desired color for the name */
+  color: white; /* Change name color to white */
 }
 
 .role {

@@ -22,9 +22,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a id="toggle-dark-mode" class="nav-link" href="#" title="Toggle Dark/Light Mode">
-            <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
-          </a>
+          <label class="switch">
+            <input type="checkbox" id="theme-switcher">
+            <span class="slider round"></span>
+          </label>
         </li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
@@ -54,15 +55,26 @@
   <script src="js/script.js"></script>
   <script>
     // Dark Mode Toggle Functionality
-    const toggleIcon = document.getElementById('toggle-dark-mode');
-    let darkMode = false;
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeSwitcher = document.getElementById('theme-switcher');
 
-    toggleIcon.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevent the default anchor click behavior
-      darkMode = !darkMode;
-      document.body.classList.toggle('dark-mode', darkMode);
-      // Change the icon based on the mode
-      toggleIcon.innerHTML = darkMode ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+      // Load saved theme preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        themeSwitcher.checked = true;
+      }
+      // Detect OS preference if no saved preference
+      else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.body.classList.add('dark');
+        themeSwitcher.checked = true;
+      }
+
+      // Handle toggle switch
+      themeSwitcher.addEventListener('change', function() {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', this.checked ? 'dark' : 'light');
+      });
     });
   </script>
 </body>
