@@ -8,9 +8,11 @@
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Suryaprakash Uppalapati</a>
@@ -19,32 +21,32 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> <!-- Home Button -->
+        <li class="nav-item">
+          <label class="switch">
+            <input type="checkbox" id="theme-switcher">
+            <span class="slider round"></span>
+          </label>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="container mt-5">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Dynamic Object Detection System (YOLO)</h3>
-        <p>Improved real-time detection accuracy by 40% using YOLO. Reduced processing latency by 20%.</p>
-      </div>
-      <div class="project-card">
-        <h3>Meta Llama 2 Fine-Tuning</h3>
-        <p>Fine-tuned Meta Llama 2 for domain-specific tasks. Boosted response accuracy by 30%.</p>
-      </div>
-      <div class="project-card">
-        <h3>AWS DeepRacer Reinforcement Learning</h3>
-        <p>Ranked 22nd in the U.S. for AWS DeepRacer competition, optimizing reinforcement learning for autonomous driving.</p>
-      </div>
-    </div>
+  <!-- Projects Content -->
+  <section id="projects" class="container mt-5">
+    <h2>My Projects</h2>
+    <ul>
+      <li><strong>Dynamic Object Detection System (YOLO):</strong> Improved detection accuracy by 40% and reduced latency by 20% using YOLO.</li>
+      <li><strong>Meta Llama 2 Fine-Tuning:</strong> Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</li>
+      <li><strong>AWS DeepRacer:</strong> Ranked 22nd in U.S. for autonomous driving reinforcement learning competition.</li>
+    </ul>
   </section>
 
-  <footer class="text-center">
+  <!-- Footer -->
+  <footer class="footer text-center">
     <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/suryaprakash55" target="_blank">linkedin.com/in/suryaprakash55</a></p>
     <p>&copy; 2024 Suryaprakash Uppalapati</p>
@@ -54,5 +56,35 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- JavaScript for Dark/Light Mode Toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeSwitcher = document.getElementById('theme-switcher');
+
+      // Load saved theme preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        themeSwitcher.checked = true;
+      } else if (savedTheme === 'light') {
+        document.body.classList.remove('dark');
+        themeSwitcher.checked = false;
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.body.classList.add('dark');
+        themeSwitcher.checked = true;
+      } else {
+        document.body.classList.remove('dark');
+        themeSwitcher.checked = false;
+      }
+
+      // Handle toggle switch
+      themeSwitcher.addEventListener('change', function() {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', this.checked ? 'dark' : 'light');
+      });
+    });
+  </script>
 </body>
 </html>
