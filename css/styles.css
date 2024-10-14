@@ -231,3 +231,12 @@ body {
     font-size: 1em; /* Reduce footer text size on smaller screens */
   }
 }
+/* Add this CSS for active link styling */
+.nav-link.active {
+  background-color: #ff6347; /* Change to your preferred color */
+  color: white; /* Change text color to white */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding for better appearance */
+}
+
+
