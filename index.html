@@ -13,26 +13,25 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Suryaprakash Uppalapati</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <label class="switch">
-                    <input type="checkbox" id="theme-switcher">
-                    <span class="slider round"></span>
-                </label>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        </ul>
-        
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <label class="switch">
+            <input type="checkbox" id="theme-switcher">
+            <span class="slider round"></span>
+          </label>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -40,7 +39,7 @@
   <section id="hero" class="d-flex justify-content-center align-items-center text-center">
     <div class="hero-content">
       <h1 class="name">Suryaprakash Uppalapati</h1>
-      <p class="role">AI & ML Engineer | Generative AI Enthusiast</p> <!-- Static role text -->
+      <p class="role">AI & ML Engineer | Generative AI Enthusiast</p>
     </div>
   </section>
 
@@ -80,13 +79,11 @@
       // Handle active link highlighting
       const navLinks = document.querySelectorAll('.nav-link');
       
+      // Set active class based on current URL
       navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          // Remove 'active' class from all links
-          navLinks.forEach(nav => nav.classList.remove('active'));
-          // Add 'active' class to the clicked link
-          this.classList.add('active');
-        });
+        if (link.href === window.location.href) {
+          link.classList.add('active');
+        }
       });
     });
   </script>

@@ -10,6 +10,101 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
+  
+  <style>
+    /* Additional styles for projects page */
+    .featured-project {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      margin-bottom: 3rem;
+    }
+
+    .featured-project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-description {
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .dark .featured-project {
+      background: #2d2d2d;
+    }
+
+    .dark .project-description {
+      color: #b0b0b0;
+    }
+
+    .other-projects {
+      margin-top: 2rem;
+    }
+
+    .other-projects ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .other-projects li {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .dark .other-projects li {
+      background: #2d2d2d;
+    }
+
+    .other-projects li:hover {
+      transform: translateX(10px);
+    }
+
+    /* Modified Navigation styles */
+    .nav-item .nav-link {
+      margin: 0 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-item .nav-link:hover {
+      background-color: #ff8c00;
+      color: #fff !important;
+    }
+
+    /* Active/current page highlight */
+    .nav-link[href="projects.html"],
+    .nav-link.active {
+      font-weight: bold;
+      color: #fff !important;
+      background-color: #ff8c00;
+      border-radius: 20px;
+    }
+
+    /* Navigation button styles */
+    .navbar-toggler {
+      background-color: #ff8c00 !important;
+      border-color: #ff8c00 !important;
+      border-radius: 20px;
+      padding: 8px 12px;
+    }
+    
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    /* Dark mode specific styles */
+    .dark .nav-link:hover,
+    .dark .nav-link[href="projects.html"],
+    .dark .nav-link.active {
+      background-color: #ff8c00;
+      color: #fff !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -38,39 +133,38 @@
   <!-- Projects Content -->
   <section id="projects" class="container mt-5">
     <h2>My Projects</h2>
-    <ul>
-      <li><strong>Dynamic Object Detection System (YOLO):</strong> Improved detection accuracy by 40% and reduced latency by 20% using YOLO.</li>
-      <li><strong>Meta Llama 2 Fine-Tuning:</strong> Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</li>
-      <li><strong>AWS DeepRacer:</strong> Ranked 22nd in U.S. for autonomous driving reinforcement learning competition.</li>
-    </ul>
     
-    <!-- Images Layout -->
-    <h3><a href="https://www.kaggle.com/datasets/imdevskp/corona-virus-report" target="_blank">Visualising Covid 19 Dataset using Power BI</a></h3>
-    <div class="row">
-      <div class="col-md-6 mb-4 d-flex flex-column align-items-center">
-        <a href="https://app.powerbi.com/groups/me/reports/8ad6389a-5d10-46df-a13e-97d7057299e7/395be7da9187c8d86bbc?ctid=7b8d4885-765a-4299-9a92-4edb30779085&pbi_source=shareVisual&visual=6c6aea6e1b5be296a50&height=560.00&width=688.00&bookmarkGuid=3664ceba-670d-4ff8-b144-b2519e5c1238" target="_blank">
-          <img src="CASES_GLOBALLY.png" alt="Project Image 1" class="img-fluid mb-2">
-        </a>
-        <p>Global COVID-19 Cases Overview</p>
+    <!-- Featured Project -->
+    <div class="featured-project">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="covid-project.html">
+            <img src="mainpic.png" alt="COVID-19 Dashboard" class="img-fluid rounded shadow">
+          </a>
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h3>
+            <a href="covid-project.html" class="text-decoration-none">
+              Visualising Covid 19 Dataset using Power BI
+            </a>
+          </h3>
+          <p class="project-description">
+            Developed a comprehensive COVID-19 visualization dashboard using Power BI to analyze global pandemic data. 
+            The project features interactive visualizations of worldwide cases, top affected countries, recovery rates, 
+            and detailed country-wise statistics. This dashboard provides crucial insights into the pandemic's spread 
+            and impact across different regions.
+          </p>
+        </div>
       </div>
-      <div class="col-md-6 mb-4 d-flex flex-column align-items-center">
-        <a href="https://app.powerbi.com/groups/me/reports/8ad6389a-5d10-46df-a13e-97d7057299e7/58c58f3ceb9b0eb70694?ctid=7b8d4885-765a-4299-9a92-4edb30779085&pbi_source=shareVisual&visual=f9741151377d9ec0c0b1&height=424.00&width=704.00&bookmarkGuid=3607ae47-15fc-42f1-9b3c-ab2250bd88b8" target="_blank">
-          <img src="TOP10.png" alt="Project Image 2" class="img-fluid mb-2">
-        </a>
-        <p>Top 10 Affected Countries</p>
-      </div>
-      <div class="col-md-6 mb-4 d-flex flex-column align-items-center">
-        <a href="https://app.powerbi.com/groups/me/reports/8ad6389a-5d10-46df-a13e-97d7057299e7/2ee3b8bd0d9040a7d54c?ctid=7b8d4885-765a-4299-9a92-4edb30779085&pbi_source=shareVisual&visual=daffde7e187566155997&height=432.00&width=712.00&bookmarkGuid=2b6b3914-5ec6-4b24-a6cc-8d549ae7dca1" target="_blank">
-          <img src="PIECHART.png" alt="Project Image 3" class="img-fluid mb-2">
-        </a>
-        <p>Proportion of total cases, recoveries, and deaths globally</p>
-      </div>
-      <div class="col-md-6 mb-4 d-flex flex-column align-items-center">
-        <a href="https://app.powerbi.com/groups/me/reports/8ad6389a-5d10-46df-a13e-97d7057299e7/28f93d3e803dd5ab8c02?ctid=7b8d4885-765a-4299-9a92-4edb30779085&pbi_source=shareVisual&visual=6789dfb943450187d002&height=616.00&width=568.00&bookmarkGuid=311e9a40-dd95-4399-a1a5-6890d0b0dc75" target="_blank">
-          <img src="TABLE.png" alt="Project Image 4" class="img-fluid mb-2">
-        </a>
-        <p>Tabular view of the total cases, deaths, and recoveries for each country</p>
-      </div>
+    </div>
+
+    <!-- Other Projects -->
+    <div class="other-projects">
+      <ul>
+        <li><strong>Dynamic Object Detection System (YOLO):</strong> Improved detection accuracy by 40% and reduced latency by 20% using YOLO.</li>
+        <li><strong>Meta Llama 2 Fine-Tuning:</strong> Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</li>
+        <li><strong>AWS DeepRacer:</strong> Ranked 22nd in U.S. for autonomous driving reinforcement learning competition.</li>
+      </ul>
     </div>
   </section>
 
@@ -83,7 +177,7 @@
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
 
@@ -91,6 +185,15 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const themeSwitcher = document.getElementById('theme-switcher');
+      
+      // Add active class to current page nav link
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
 
       // Load saved theme preference
       const savedTheme = localStorage.getItem('theme');

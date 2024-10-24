@@ -7,7 +7,40 @@
   
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
+
+  <style>
+    /* Navigation link styles */
+    .nav-item .nav-link {
+      margin: 0 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-item .nav-link:hover {
+      background-color: #ff8c00;
+      color: #fff !important;
+    }
+
+    /* Active/current page highlight */
+    .nav-link[href="about.html"],
+    .nav-link.active {
+      font-weight: bold;
+      color: #fff !important;
+      background-color: #ff8c00;
+      border-radius: 20px;
+    }
+
+    /* Dark mode specific styles */
+    .dark .nav-link:hover,
+    .dark .nav-link[href="about.html"],
+    .dark .nav-link.active {
+      background-color: #ff8c00;
+      color: #fff !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,7 +59,7 @@
           </label>
         </li>
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
       </ul>
@@ -58,6 +91,41 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- JavaScript for Dark/Light Mode Toggle and Active Link -->
-  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeSwitcher = document.getElementById('theme-switcher');
+
+      // Add active class to current page nav link
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+
+      // Load saved theme preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        themeSwitcher.checked = true;
+      } else if (savedTheme === 'light') {
+        document.body.classList.remove('dark');
+        themeSwitcher.checked = false;
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.body.classList.add('dark');
+        themeSwitcher.checked = true;
+      } else {
+        document.body.classList.remove('dark');
+        themeSwitcher.checked = false;
+      }
+
+      // Handle toggle switch
+      themeSwitcher.addEventListener('change', function() {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', this.checked ? 'dark' : 'light');
+      });
+    });
+  </script>
 </body>
 </html>

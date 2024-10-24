@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Project | Suryaprakash Uppalapati</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar (same as projects.html) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Same navbar content as projects.html -->
+  </nav>
+
+  <!-- Project Details -->
+  <section class="container mt-5">
+    <div class="mb-4">
+      <a href="projects.html" class="btn btn-outline-primary mb-4">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+      <h1>Visualising Covid 19 Dataset using Power BI</h1>
+      <p class="lead">A comprehensive dashboard analyzing global COVID-19 data through interactive visualizations.</p>
+    </div>
+
+    <div class="project-gallery">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img src="CASES_GLOBALLY.png" alt="Global COVID-19 Cases" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Global COVID-19 Cases Overview</h5>
+              <p class="card-text">Interactive visualization showing the worldwide distribution of COVID-19 cases.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img src="TOP10.png" alt="Top 10 Countries" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Top 10 Affected Countries</h5>
+              <p class="card-text">Analysis of the most impacted nations based on total cases and other metrics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img src="PIECHART.png" alt="Cases Distribution" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Global Distribution Analysis</h5>
+              <p class="card-text">Proportion of total cases, recoveries, and deaths worldwide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img src="TABLE.png" alt="Detailed Statistics" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Country-wise Statistics</h5>
+              <p class="card-text">Detailed tabular view of COVID-19 statistics for each country.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (same as projects.html) -->
+  <footer class="footer text-center">
+    <!-- Same footer content as projects.html -->
+  </footer>
+
+  <!-- Add this CSS to your styles.css -->
+  <style>
+    .card {
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .dark .card {
+      background: #2d2d2d;
+      border-color: #444;
+    }
+
+    .dark .card-body {
+      color: #fff;
+    }
+  </style>
+
+  <!-- Same scripts as projects.html -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
