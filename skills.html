@@ -141,49 +141,123 @@
   </section>
 
   <!-- Certifications Section -->
-  <section class="container mt-5 certifications-section">
-    <h2>Certifications</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="certification-title">AWS Certified Solutions Architect</div>
-          <ul class="certification-list">
-            <li>Issued: June 2024</li>
-            <li>Provider: Amazon Web Services</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="certification-title">Certified Data Scientist</div>
-          <ul class="certification-list">
-            <li>Issued: September 2024</li>
-            <li>Provider: Data Science Council</li>
-          </ul>
+<!-- Certifications Section -->
+<section class="container mt-5">
+  <h2>Certifications</h2>
+  <div class="row certification-container">
+    <div class="col-md-4 col-sm-6 mb-3"> <!-- 3 per row on medium screens, 2 on small screens -->
+      <div class="card certification-card">
+        <a href="https://www.coursera.org/account/accomplishments/verify/2IUSEAXSMMYQ" target="_blank">
+          <img src="deeplearninglogo.jpeg" class="card-img-top" alt="DeepLearning.AI">
+        </a>
+        <div class="card-body">
+          <a href="https://www.coursera.org/account/accomplishments/verify/2IUSEAXSMMYQ" target="_blank">
+            <h5 class="card-title">Supervised Machine Learning</h5>
+          </a>
+          <p class="card-text">DeepLearning.AI</p>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="certification-title">Machine Learning Specialization</div>
-          <ul class="certification-list">
-            <li>Issued: July 2024</li>
-            <li>Provider: Coursera</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="certification-title">Python for Data Science</div>
-          <ul class="certification-list">
-            <li>Issued: August 2024</li>
-            <li>Provider: edX</li>
-          </ul>
+    <div class="col-md-4 col-sm-6 mb-3">
+      <div class="card certification-card">
+        <a href="https://www.udacity.com/certificate/e/159f2a22-769c-11ef-bbaf-531a1a6740b4" target="_blank">
+          <img src="udacitylogo.jpeg" class="card-img-top" alt="Udacity">
+        </a>
+        <div class="card-body">
+          <a href="https://www.udacity.com/certificate/e/159f2a22-769c-11ef-bbaf-531a1a6740b4" target="_blank">
+            <h5 class="card-title">Introducing Generative AI</h5>
+          </a>
+          <p class="card-text">Udacity</p>
         </div>
       </div>
     </div>
-  </section>
+    <div class="col-md-4 col-sm-6 mb-3">
+      <div class="card certification-card">
+        <a href="https://www.credly.com/badges/c314fb64-d2be-4aa9-8e77-fa5e9069afce?source=linked_in_profile" target="_blank">
+          <img src="awslogo.jpeg" class="card-img-top" alt="AWS Academy">
+        </a>
+        <div class="card-body">
+          <a href="https://www.credly.com/badges/c314fb64-d2be-4aa9-8e77-fa5e9069afce?source=linked_in_profile" target="_blank">
+            <h5 class="card-title">AWS Academy Machine Learning Foundations</h5>
+          </a>
+          <p class="card-text">AWS Academy</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-3">
+      <div class="card certification-card">
+        <a href="https://www.credly.com/badges/ae25ff37-eb6e-4410-b6a6-bbf7a46f6714/linked_in_profile" target="_blank">
+          <img src="awslogo.jpeg" class="card-img-top" alt="AWS Academy">
+        </a>
+        <div class="card-body">
+          <a href="https://www.credly.com/badges/ae25ff37-eb6e-4410-b6a6-bbf7a46f6714/linked_in_profile" target="_blank">
+            <h5 class="card-title">AWS Academy Cloud Foundations</h5>
+          </a>
+          <p class="card-text">AWS Academy</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-3">
+      <div class="card certification-card">
+        <a href="https://www.pythoninstitute.org/certification/pcap/" target="_blank">
+          <img src="ciscologo.jpeg" class="card-img-top" alt="PCAP">
+        </a>
+        <div class="card-body">
+          <a href="https://www.pythoninstitute.org/certification/pcap/" target="_blank">
+            <h5 class="card-title">PCAP Programming Essentials in Python</h5>
+          </a>
+          <p class="card-text">Python Institute</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS for styling the certification cards -->
+<style>
+  .certification-card {
+    border: 1px solid #ccc; /* Add border for visibility */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    height: 300px; /* Set a fixed height for all cards */
+  }
+  
+  .certification-card:hover {
+    transform: translateZ(10px); /* Move the card forward */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+  }
+
+  .card-img-top {
+    width: 100%; /* Make image responsive */
+    height: 150px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the space without stretching */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  }
+
+  .certification-card:hover .card-img-top {
+    transform: scale(1.1); /* Zoom in the logo */
+  }
+
+  .card-body {
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Full height for the body */
+  }
+
+  .card-title {
+    font-size: 1.2rem; /* Adjust title size */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+</style>
+
+
+
+
 
   <!-- Footer -->
   <footer class="footer text-center">
