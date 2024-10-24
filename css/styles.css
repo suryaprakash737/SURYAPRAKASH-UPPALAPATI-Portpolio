@@ -103,7 +103,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('../images/ai.jpg'); /* Set your local image as the background */
+  background-image: url('../images/homepage.jpg'); /* Set your local image as the background */
   background-size: cover; /* Cover the entire section */
   background-position: center; /* Center the image */
   background-attachment: fixed; /* Fixed attachment for scrolling effect */
@@ -117,11 +117,15 @@ body {
 .name {
   font-size: 6em;
   margin-bottom: 15px;
-  color: white; /* Change name color to white */
+  font-weight: bold;
+  color:cyan;
+  /* Change name color to white */
 }
 
 .role {
   font-size: 2.5em;
+  font-weight: bold;
+  color:orange;
   margin-bottom: 20px;
 }
 

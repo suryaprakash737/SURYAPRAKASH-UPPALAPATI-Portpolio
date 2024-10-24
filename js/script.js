@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+  
+
     const themeSwitcher = document.getElementById('theme-switcher');
   
     // Load saved theme preference
