@@ -8,7 +8,6 @@
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
 
   <style>
@@ -26,20 +25,11 @@
     }
 
     /* Active/current page highlight */
-    .nav-link[href="skills.html"],
     .nav-link.active {
       font-weight: bold;
       color: #fff !important;
       background-color: #ff8c00;
       border-radius: 20px;
-    }
-
-    /* Dark mode specific styles */
-    .dark .nav-link:hover,
-    .dark .nav-link[href="skills.html"],
-    .dark .nav-link.active {
-      background-color: #ff8c00;
-      color: #fff !important;
     }
   </style>
 </head>
@@ -61,20 +51,21 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Skills Content -->
-  <section id="skills" class="container mt-5">
+  <!-- Skills Section -->
+  <section class="container mt-5">
     <h2>My Skills</h2>
     <ul>
-      <li><strong>Programming Languages:</strong> Python, C++, Java</li>
-      <li><strong>Machine Learning:</strong> Scikit-learn, TensorFlow, PyTorch</li>
-      <li><strong>Cloud Platforms:</strong> AWS, Google Cloud</li>
-      <li><strong>Generative AI:</strong> GPT, BERT, LLaMA 2</li>
+      <li>Machine Learning</li>
+      <li>Deep Learning</li>
+      <li>Data Analysis with Python</li>
+      <li>Cloud Computing (AWS)</li>
+      <li>Reinforcement Learning</li>
     </ul>
   </section>
 
@@ -89,9 +80,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
 
-  <!-- JavaScript for Dark/Light Mode Toggle and Active Link Highlight -->
+  <!-- JavaScript for Dark/Light Mode Toggle and Active Link -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const themeSwitcher = document.getElementById('theme-switcher');
@@ -100,8 +90,9 @@
       const currentPage = window.location.pathname.split('/').pop();
       const navLinks = document.querySelectorAll('.nav-link');
       navLinks.forEach(link => {
+        link.classList.remove('active'); // Remove active class from all links
         if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
+          link.classList.add('active'); // Add active class to the current page link
         }
       });
 
@@ -128,5 +119,6 @@
       });
     });
   </script>
+
 </body>
 </html>
