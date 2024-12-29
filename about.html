@@ -32,6 +32,32 @@
      background-color: #ff8c00;
      border-radius: 20px;
    }
+   body.dark {
+  background-color: #121212;
+  color: #ffffff; /* Bright white for general text */
+}
+
+body.dark .about-container {
+  background-color: #1e1e1e;
+  color: #ffffff; /* Bright white for text inside the container */
+}
+
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark ul li {
+  color: #ffffff; /* Bright white for headings, paragraphs, and list items */
+}
+
+body.dark .nav-link {
+  color: #ffffff !important; /* Bright white for navigation links */
+}
+
+body.dark .footer p,
+body.dark .footer a {
+  color: #ffffff; /* Bright white for footer text */
+}
+
  </style>
 </head>
 <body>
@@ -60,17 +86,154 @@
 
 
 
-  <!-- About Section -->
-  <section class="container mt-5">
-    <h2>About Me</h2>
-    <p>
-      I’m a passionate AI & ML Engineer with experience in building machine learning models and fine-tuning generative AI models like Meta Llama 2.
-      With a strong foundation in Python, AWS services, and reinforcement learning, I thrive on solving complex challenges.
+  
+ <style>
+  
+  body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  .about-container {
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.dark .about-container {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .profile-picture {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .profile-picture img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #ddd;
+  }
+
+  .about-content {
+    flex: 2;
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .skills-tools-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .skills-tools-section div {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
+
+  .skills-tools-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .skills-tools-list {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .skills-tools-list li {
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="about-container">
+  <div class="profile-picture">
+    <img src="profile_pic.jpg" alt="Suryaprakash Uppalapati">
+  </div>
+  <div class="about-content">
+    <h2 class="about-title">About Me</h2>
+    <p class="about-description">
+      Hello! I’m Suryaprakash Uppalapati, a Computer Science graduate student with a concentration in Machine Learning at George Mason University. I have a strong passion for AI, machine learning, and data science, with hands-on experience in real-time object detection systems and ethical AI integration. I currently serve as a volunteer research assistant at the Community Informatics Lab, where I explore innovative solutions in data science.
     </p>
 
-    <!-- Insert Image Here -->
-    <img src="images/SAMPLE.png" alt="Suryaprakash Uppalapati" class="img-fluid" style="display: block; margin: 20px auto; width: 80%;">
-  </section>
+    <div class="skills-tools-section">
+      <div>
+        <h3 class="skills-tools-title">Skills</h3>
+        <ul class="skills-tools-list">
+          <li>Programming Languages: Python, C++, SQL</li>
+          <li>Web Development: HTML, CSS, JavaScript</li>
+          <li>Machine Learning: TensorFlow, Keras, Scikit-learn</li>
+          <li>Data Analysis: NumPy, Pandas, Matplotlib</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="skills-tools-title">Tools</h3>
+        <ul class="skills-tools-list">
+          <li>Jupyter Notebook, PyCharm, VS Code</li>
+          <li>AWS SageMaker, Amazon Bedrock</li>
+          <li>Power BI, Tableau</li>
+          <li>Git, SAS</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="skills-tools-title">Software</h3>
+        <ul class="skills-tools-list">
+          <li>MATLAB, AutoCAD</li>
+          <li>Microsoft Office Suite</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="skills-tools-title">Domains</h3>
+        <ul class="skills-tools-list">
+          <li>Data Science</li>
+          <li>Machine Learning</li>
+          <li>Real-Time Object Detection Systems</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Footer -->
   <footer class="footer text-center">
