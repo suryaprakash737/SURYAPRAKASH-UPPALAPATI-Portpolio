@@ -4,168 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Suryaprakash Uppalapati</title>
-  
+
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
-  
+  <link rel="stylesheet" href="css/styles.css">
+
   <style>
-    /* Full-screen animated background */
     body {
-      background-image: linear-gradient(135deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url('https://cdn.svgator.com/images/2024/02/computer-burst-line-animation.gif');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: white;
+      background-color: #f8f9fa;
       font-family: 'Poppins', sans-serif;
-      position: relative;
-      overflow-x: hidden;
+      color: #333;
     }
 
-    /* Floating icons for visual effect */
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
-
-    .floating-icon {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: #fff;
-      border-radius: 50%;
-      opacity: 0.3;
-      animation: float 5s ease-in-out infinite;
-    }
-
-    .icon1 { top: 20%; left: 10%; animation-duration: 6s; }
-    .icon2 { top: 40%; right: 15%; animation-duration: 7s; }
-    .icon3 { top: 60%; left: 25%; animation-duration: 8s; }
-
-    /* Project card hover animation */
-    .featured-project {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 2rem;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 3rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .featured-project:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .project-description {
-      line-height: 1.6;
-      color: #ddd;
-    }
-
-    .dark .featured-project {
-      background: rgba(45, 45, 45, 0.9);
-    }
-
-    .dark .project-description {
-      color: #b0b0b0;
-    }
-
-    .other-projects {
-      margin-top: 2rem;
-    }
-
-    .other-projects ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .other-projects li {
-      margin-bottom: 1rem;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 5px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .dark .other-projects li {
-      background: rgba(45, 45, 45, 0.9);
-    }
-
-    .other-projects li:hover {
-      transform: translateX(10px);
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Navigation hover effect */
-    .nav-item .nav-link {
-      margin: 0 5px;
-      padding: 8px 15px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .nav-item .nav-link:hover {
-      background-color: #ff8c00;
-      color: #fff !important;
-    }
-
-    /* Active/current page highlight */
-    .nav-link[href="projects.html"],
-    .nav-link.active {
-      font-weight: bold;
-      color: #fff !important;
-      background-color: #ff8c00;
-      border-radius: 20px;
-    }
-
-    /* Sticky Navbar */
     .navbar {
+      background-color: #343a40;
       position: sticky;
       top: 0;
       z-index: 1000;
-      background-color: #343a40; /* Keeps the dark background consistent */
     }
 
-    /* Navigation button styles */
-    .navbar-toggler {
-      background-color: #ff8c00 !important;
-      border-color: #ff8c00 !important;
-      border-radius: 20px;
-      padding: 8px 12px;
-    }
-    
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #ff8c00 !important;
     }
 
-    /* Dark mode specific styles */
-    .dark .nav-link:hover,
-    .dark .nav-link[href="projects.html"],
-    .dark .nav-link.active {
-      background-color: #ff8c00;
-      color: #fff !important;
+    .nav-link {
+      color: white !important;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ff8c00 !important;
+    }
+
+    .header-section {
+      background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .header-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .header-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .project-card {
+      background-color: white;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-image {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .project-description {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #ff8c00;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="index.html">Suryaprakash Uppalapati</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <label class="switch">
-            <input type="checkbox" id="theme-switcher">
-            <span class="slider round"></span>
-          </label>
-        </li>
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
@@ -174,109 +126,67 @@
     </div>
   </nav>
 
-  <!-- Floating icons for decoration -->
-  <div class="floating-icon icon1"></div>
-  <div class="floating-icon icon2"></div>
-  <div class="floating-icon icon3"></div>
+  <!-- Header Section -->
+  <section class="header-section">
+    <h1>My Projects</h1>
+    <p>A showcase of my work in AI, Machine Learning, and Data Science, featuring interactive visualizations and impactful solutions.</p>
+  </section>
 
-  <!-- Projects Content -->
-  <section id="projects" class="container mt-5">
-    <h2>My Projects</h2>
-    
-    <!-- Featured Project -->
-    <div class="featured-project">
-      <div class="row">
-        <div class="col-md-6">
-          <a href="covid-project.html">
-            <img src="mainpic.png" alt="COVID-19 Dashboard" class="img-fluid rounded shadow">
-          </a>
-        </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-          <h3>
-            <a href="covid-project.html" class="text-decoration-none">
-              Visualising Covid 19 Dataset using Power BI
-            </a>
-          </h3>
-          <p class="project-description">
-            Developed a comprehensive COVID-19 visualization dashboard using Power BI to analyze global pandemic data. 
-            The project features interactive visualizations of worldwide cases, top affected countries, recovery rates, 
-            and detailed country-wise statistics. This dashboard provides crucial insights into the pandemic's spread 
-            and impact across different regions.
-          </p>
+  <!-- Projects Section -->
+  <section class="container py-5">
+    <div class="row">
+      <!-- Featured Project -->
+      <div class="col-md-6 mb-4">
+        <div class="card project-card">
+          <img src="mainpic.png" alt="COVID-19 Dashboard" class="card-img-top project-image">
+          <div class="card-body">
+            <h5 class="project-title">Visualising COVID-19 Dataset using Power BI</h5>
+            <p class="project-description">Developed a comprehensive COVID-19 visualization dashboard using Power BI to analyze global pandemic data, providing crucial insights into the pandemic's spread and impact.</p>
+            <a href="covid-project.html" class="btn btn-primary">Learn More</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Other Projects -->
-    <div class="other-projects">
-      <ul>
-        <li>
-          <strong>
-            <a href="https://github.com/suryaprakash737/ObjectDetectionUsingYOLO" target="_blank" class="text-decoration-none">
-              Dynamic Object Detection System (YOLO): 
-            </a>
-            <a href="https://github.com/suryaprakash737/ObjectDetectionUsingYOLO" target="_blank" class="text-decoration-none">
-              Improved detection accuracy by 40% and reduced latency by 20% using YOLO. 
-            </a>
-          </strong>
-          
-        </li>
-        
-        <li><strong>Meta Llama 2 Fine-Tuning:</strong> Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</li>
-        <li><strong>AWS DeepRacer:</strong> Ranked 22nd in U.S. for autonomous driving reinforcement learning competition.</li>
-      </ul>
+      <!-- Other Projects -->
+      <div class="col-md-6 mb-4">
+        <div class="card project-card">
+          <div class="card-body">
+            <h5 class="project-title">Dynamic Object Detection System (YOLO)</h5>
+            <p class="project-description">Improved detection accuracy by 40% and reduced latency by 20% using YOLO for real-time object detection systems.</p>
+            <a href="https://github.com/suryaprakash737/ObjectDetectionUsingYOLO" target="_blank" class="btn btn-primary">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card project-card">
+          <div class="card-body">
+            <h5 class="project-title">Meta Llama 2 Fine-Tuning</h5>
+            <p class="project-description">Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card project-card">
+          <div class="card-body">
+            <h5 class="project-title">AWS DeepRacer</h5>
+            <p class="project-description">Ranked 22nd in the U.S. for autonomous driving reinforcement learning competition.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer text-center">
+  <footer class="footer">
     <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
     <p>&copy; 2024 Suryaprakash Uppalapati</p>
   </footer>
 
   <!-- Bootstrap JS and dependencies -->
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
- <!-- JavaScript for Dark/Light Mode Toggle and Active Link -->
- <script>
-   document.addEventListener('DOMContentLoaded', function() {
-     const themeSwitcher = document.getElementById('theme-switcher');
-
-     // Add active class to current page nav link
-     const currentPage = window.location.pathname.split('/').pop();
-     const navLinks = document.querySelectorAll('.nav-link');
-     navLinks.forEach(link => {
-       link.classList.remove('active'); // Remove active class from all links
-       if (link.getAttribute('href') === currentPage) {
-         link.classList.add('active'); // Add active class to the current page link
-       }
-     });
-
-     // Load saved theme preference
-     const savedTheme = localStorage.getItem('theme');
-     if (savedTheme === 'dark') {
-       document.body.classList.add('dark');
-       themeSwitcher.checked = true;
-     } else if (savedTheme === 'light') {
-       document.body.classList.remove('dark');
-       themeSwitcher.checked = false;
-     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-       document.body.classList.add('dark');
-       themeSwitcher.checked = true;
-     } else {
-       document.body.classList.remove('dark');
-       themeSwitcher.checked = false;
-     }
-
-     // Handle toggle switch
-     themeSwitcher.addEventListener('change', function() {
-       document.body.classList.toggle('dark');
-       localStorage.setItem('theme', this.checked ? 'dark' : 'light');
-     });
-   });
- </script>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

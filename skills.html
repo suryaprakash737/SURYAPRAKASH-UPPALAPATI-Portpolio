@@ -4,83 +4,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills | Suryaprakash Uppalapati</title>
-  
+
   <!-- Bootstrap CSS -->
- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 
- <style>
-  /* Navigation link styles */
-  .nav-item .nav-link {
-    margin: 0 5px;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-  }
+  <style>
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url('skills-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-  .nav-item .nav-link:hover {
-    background-color: #ff8c00;
-    color: #fff !important;
-  }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
 
-  /* Active/current page highlight */
-  .nav-link.active {
-    font-weight: bold;
-    color: #fff !important;
-    background-color: #ff8c00;
-    border-radius: 20px;
-  }
-  .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #343a40; /* Keeps the dark background consistent */
-}
+    .hero p {
+      font-size: 1.2rem;
+    }
 
+    /* Skills Section */
+    .skills-section {
+      padding: 50px 20px;
+    }
 
-  /* Dark Mode Styles */
-  body.dark-mode {
-    background-color: #121212; /* Dark background color */
-    color: #e0e0e0; /* Light text color */
-  }
+    .card {
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 10px;
+    }
 
-  .skills-section,
-  .certifications-section {
-    background-color: #1e1e1e; /* Darker background for sections */
-    color: #e0e0e0; /* Light text color */
-  }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
 
-  .card {
-    background-color: #2a2a2a; /* Dark background for cards */
-    border: none; /* No border for cards */
-    color: #e0e0e0; /* Light text color */
-  }
+    .card .skill-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #ff8c00;
+    }
 
-  .card .skill-title,
-  .card .certification-title {
-    color: #ff8c00; /* Highlight title color */
-  }
-</style>
+    .skill-list li {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
 
+    /* Certifications Section */
+    .certifications-section {
+      padding: 50px 20px;
+    }
+
+    .certification-card img {
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .certification-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .certification-card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ff8c00;
+    }
+
+    /* Sticky Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #343a40;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-item .nav-link {
+      margin: 0 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-item .nav-link:hover {
+      background-color: #ff8c00;
+      color: #fff !important;
+    }
+
+    .nav-link.active {
+      font-weight: bold;
+      color: #fff !important;
+      background-color: #ff8c00;
+      border-radius: 20px;
+    }
+  </style>
 </head>
 <body>
+  <div class="page-transition-overlay"></div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Suryaprakash Uppalapati</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <label class="switch">
-            <input type="checkbox" id="theme-switcher">
-            <span class="slider round"></span>
-          </label>
-        </li>
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
@@ -89,234 +140,73 @@
     </div>
   </nav>
 
-  <!-- Skills Section -->
-  <section class="container mt-5 skills-section">
-    <h2>My Skills</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="skill-title">Programming Languages</div>
-          <ul class="skill-list">
-            <li><span class="skill-icon">🐍</span> Python (NumPy, Pandas, Matplotlib, Scikit-learn)</li>
-            <li><span class="skill-icon">💻</span> C++</li>
-            <li><span class="skill-icon">🗄️</span> SQL</li>
-            <li><span class="skill-icon">🌐</span> HTML</li>
-            <li><span class="skill-icon">🎨</span> CSS</li>
-           <li><span class="skill-icon">📜</span> JavaScript</li>
-            <li><span class="skill-icon">📊</span> Data Structures</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="skill-title">Tools</div>
-          <ul class="skill-list">
-            <li><span class="skill-icon">🔧</span> Jupyter Notebook</li>
-            <li><span class="skill-icon">📝</span> PyCharm</li>
-            <li><span class="skill-icon">🔍</span> Visual Studio Code (VS Code)</li>
-            <li><span class="skill-icon">📈</span> SAS</li>
-            <li><span class="skill-icon">☁️</span> AWS SageMaker</li>
-            <li><span class="skill-icon">🔐</span> Amazon Bedrock</li>
-            <li><span class="skill-icon">🗄️</span> AWS S3</li>
-            <li><span class="skill-icon">🌳</span> Git</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>My Skills</h1>
+    <p>Explore my technical expertise and certifications.</p>
+  </section>
 
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="skill-title">Big Data Technologies</div>
-          <ul class="skill-list">
-            <li><span class="skill-icon">📊</span> PySpark</li>
-            <li><span class="skill-icon">🗄️</span> Hadoop</li>
-            <li><span class="skill-icon">🔍</span> Hive</li>
-          </ul>
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card p-4">
+            <h3 class="skill-title">Programming Languages</h3>
+            <ul class="skill-list">
+              <li>Python (NumPy, Pandas, Scikit-learn)</li>
+              <li>C++</li>
+              <li>SQL</li>
+              <li>HTML, CSS, JavaScript</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="skill-title">Machine Learning & Statistical Tools</div>
-          <ul class="skill-list">
-            <li><span class="skill-icon">🤖</span> TensorFlow</li>
-            <li><span class="skill-icon">🔬</span> Keras</li>
-          </ul>
+        <div class="col-md-6 mb-4">
+          <div class="card p-4">
+            <h3 class="skill-title">Tools</h3>
+            <ul class="skill-list">
+              <li>Jupyter Notebook</li>
+              <li>PyCharm</li>
+              <li>VS Code</li>
+              <li>AWS SageMaker</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Certifications Section -->
-<!-- Certifications Section -->
-<section class="container mt-5">
-  <h2>Certifications</h2>
-  <div class="row certification-container">
-    <div class="col-md-4 col-sm-6 mb-3"> <!-- 3 per row on medium screens, 2 on small screens -->
-      <div class="card certification-card">
-        <a href="https://www.coursera.org/account/accomplishments/verify/2IUSEAXSMMYQ" target="_blank">
-          <img src="deeplearninglogo.jpeg" class="card-img-top" alt="DeepLearning.AI">
-        </a>
-        <div class="card-body">
-          <a href="https://www.coursera.org/account/accomplishments/verify/2IUSEAXSMMYQ" target="_blank">
-            <h5 class="card-title">Supervised Machine Learning</h5>
-          </a>
-          <p class="card-text">DeepLearning.AI</p>
+  <section class="certifications-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Certifications</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card certification-card">
+            <img src="deeplearninglogo.jpeg" alt="DeepLearning.AI" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Supervised Machine Learning</h5>
+              <p class="card-text">DeepLearning.AI</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card certification-card">
+            <img src="udacitylogo.jpeg" alt="Udacity" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Generative AI</h5>
+              <p class="card-text">Udacity</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-sm-6 mb-3">
-      <div class="card certification-card">
-        <a href="https://www.udacity.com/certificate/e/159f2a22-769c-11ef-bbaf-531a1a6740b4" target="_blank">
-          <img src="udacitylogo.jpeg" class="card-img-top" alt="Udacity">
-        </a>
-        <div class="card-body">
-          <a href="https://www.udacity.com/certificate/e/159f2a22-769c-11ef-bbaf-531a1a6740b4" target="_blank">
-            <h5 class="card-title">Introducing Generative AI</h5>
-          </a>
-          <p class="card-text">Udacity</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 mb-3">
-      <div class="card certification-card">
-        <a href="https://www.credly.com/badges/c314fb64-d2be-4aa9-8e77-fa5e9069afce?source=linked_in_profile" target="_blank">
-          <img src="awslogo.jpeg" class="card-img-top" alt="AWS Academy">
-        </a>
-        <div class="card-body">
-          <a href="https://www.credly.com/badges/c314fb64-d2be-4aa9-8e77-fa5e9069afce?source=linked_in_profile" target="_blank">
-            <h5 class="card-title">AWS Academy Machine Learning Foundations</h5>
-          </a>
-          <p class="card-text">AWS Academy</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 mb-3">
-      <div class="card certification-card">
-        <a href="https://www.credly.com/badges/ae25ff37-eb6e-4410-b6a6-bbf7a46f6714/linked_in_profile" target="_blank">
-          <img src="awslogo.jpeg" class="card-img-top" alt="AWS Academy">
-        </a>
-        <div class="card-body">
-          <a href="https://www.credly.com/badges/ae25ff37-eb6e-4410-b6a6-bbf7a46f6714/linked_in_profile" target="_blank">
-            <h5 class="card-title">AWS Academy Cloud Foundations</h5>
-          </a>
-          <p class="card-text">AWS Academy</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 mb-3">
-      <div class="card certification-card">
-        <a href="https://www.pythoninstitute.org/certification/pcap/" target="_blank">
-          <img src="ciscologo.jpeg" class="card-img-top" alt="PCAP">
-        </a>
-        <div class="card-body">
-          <a href="https://www.pythoninstitute.org/certification/pcap/" target="_blank">
-            <h5 class="card-title">PCAP Programming Essentials in Python</h5>
-          </a>
-          <p class="card-text">Python Institute</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CSS for styling the certification cards -->
-<style>
-  .certification-card {
-    border: 1px solid #ccc; /* Add border for visibility */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Prevent overflow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    height: 300px; /* Set a fixed height for all cards */
-  }
-  
-  .certification-card:hover {
-    transform: translateZ(10px); /* Move the card forward */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-  }
-
-  .card-img-top {
-    width: 100%; /* Make image responsive */
-    height: 150px; /* Set a fixed height for the image */
-    object-fit: cover; /* Ensure the image covers the space without stretching */
-    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
-  }
-
-  .certification-card:hover .card-img-top {
-    transform: scale(1.1); /* Zoom in the logo */
-  }
-
-  .card-body {
-    display: flex; /* Use flexbox to align items */
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center items vertically */
-    height: 100%; /* Full height for the body */
-  }
-
-  .card-title {
-    font-size: 1.2rem; /* Adjust title size */
-  }
-
-  .card-text {
-    font-size: 0.9rem; /* Adjust text size */
-  }
-</style>
-
-
-
-
+  </section>
 
   <!-- Footer -->
-  <footer class="footer text-center">
+  <footer>
     <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/suryaprakash55" target="_blank">linkedin.com/in/suryaprakash55</a></p>
     <p>&copy; 2024 Suryaprakash Uppalapati</p>
   </footer>
-
-  <!-- Bootstrap JS and dependencies -->
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
- <!-- JavaScript for Dark/Light Mode Toggle and Active Link -->
- <script>
-   document.addEventListener('DOMContentLoaded', function() {
-     const themeSwitcher = document.getElementById('theme-switcher');
-
-     // Add active class to current page nav link
-     const currentPage = window.location.pathname.split('/').pop();
-     const navLinks = document.querySelectorAll('.nav-link');
-     navLinks.forEach(link => {
-       link.classList.remove('active'); // Remove active class from all links
-       if (link.getAttribute('href') === currentPage) {
-         link.classList.add('active'); // Add active class to the current page link
-       }
-     });
-
-     // Load saved theme preference
-     const savedTheme = localStorage.getItem('theme');
-     if (savedTheme === 'dark') {
-       document.body.classList.add('dark');
-       themeSwitcher.checked = true;
-     } else if (savedTheme === 'light') {
-       document.body.classList.remove('dark');
-       themeSwitcher.checked = false;
-     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-       document.body.classList.add('dark');
-       themeSwitcher.checked = true;
-     } else {
-       document.body.classList.remove('dark');
-       themeSwitcher.checked = false;
-     }
-
-     // Handle toggle switch
-     themeSwitcher.addEventListener('change', function() {
-       document.body.classList.toggle('dark');
-       localStorage.setItem('theme', this.checked ? 'dark' : 'light');
-     });
-   });
- </script>
-
 </body>
 </html>
-

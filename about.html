@@ -4,297 +4,231 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Suryaprakash Uppalapati</title>
-  
- <!-- Bootstrap CSS -->
- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
 
- <style>
-  /* Navigation link styles */
-  .nav-item .nav-link {
-    margin: 0 5px;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-  }
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 
-  .nav-item .nav-link:hover {
-    background-color: #ff8c00;
-    color: #fff !important;
-  }
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
 
-  /* Active/current page highlight */
-  .nav-link.active {
-    font-weight: bold;
-    color: #fff !important;
-    background-color: #ff8c00;
-    border-radius: 20px;
-  }
+    /* Sticky Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #343a40;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-  /* Sticky Navbar */
-  .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #343a40; /* Keeps the dark background consistent */
-  }
+    .nav-item .nav-link {
+      margin: 0 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
 
-  /* Dark Mode Styles */
-  body.dark {
-    background-color: #121212;
-    color: #ffffff; /* Bright white for general text */
-  }
+    .nav-item .nav-link:hover {
+      background-color: #ff8c00;
+      color: #fff !important;
+    }
 
-  body.dark .about-container {
-    background-color: #1e1e1e;
-    color: #ffffff; /* Bright white for text inside the container */
-  }
+    .nav-link.active {
+      font-weight: bold;
+      color: #fff !important;
+      background-color: #ff8c00;
+      border-radius: 20px;
+    }
 
-  body.dark h2,
-  body.dark h3,
-  body.dark p,
-  body.dark ul li {
-    color: #ffffff; /* Bright white for headings, paragraphs, and list items */
-  }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 165, 0, 0.7)), url('about-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 50vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-  body.dark .nav-link {
-    color: #ffffff !important; /* Bright white for navigation links */
-  }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
 
-  body.dark .footer p,
-  body.dark .footer a {
-    color: #ffffff; /* Bright white for footer text */
-  }
-</style>
+    .hero p {
+      font-size: 1.2rem;
+    }
 
+    /* About Section */
+    .about-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-picture img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 5px solid #ddd;
+    }
+
+    .about-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .about-description {
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin-top: 50px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: #ff8c00;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .timeline-item:nth-child(odd) {
+      text-align: left;
+    }
+
+    .timeline-item:nth-child(even) {
+      text-align: right;
+    }
+
+    .timeline-item h4 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .timeline-item p {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      background: #ff8c00;
+      border-radius: 50%;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+    }
+
+    footer a {
+      color: #ff8c00;
+    }
+  </style>
 </head>
 <body>
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Suryaprakash Uppalapati</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+      </ul>
+    </div>
+  </nav>
 
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-   <a class="navbar-brand" href="index.html">Suryaprakash Uppalapati</a>
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
-   </button>
-   <div class="collapse navbar-collapse" id="navbarNav">
-     <ul class="navbar-nav ml-auto">
-       <li class="nav-item">
-         <label class="switch">
-           <input type="checkbox" id="theme-switcher">
-           <span class="slider round"></span>
-         </label>
-       </li>
-       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-       <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-       <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-       <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-     </ul>
-   </div>
- </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>About Me</h1>
+      <p>Passionate about AI, Machine Learning, and Data Science</p>
+    </div>
+  </section>
 
-
-
-  
- <style>
-  
-  body.dark {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-
-  .about-container {
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  body.dark .about-container {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-  }
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-  }
-
-  .about-container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .profile-picture {
-    flex: 1;
-    max-width: 250px;
-    text-align: center;
-    margin: auto;
-  }
-
-  .profile-picture img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border: 5px solid #ddd;
-  }
-
-  .about-content {
-    flex: 2;
-    padding: 20px;
-  }
-
-  .about-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-  }
-
-  .about-description {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
-  }
-
-  .skills-tools-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-  .skills-tools-section div {
-    flex: 1 1 45%;
-    margin: 10px;
-  }
-
-  .skills-tools-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-
-  .skills-tools-list {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  .skills-tools-list li {
-    margin-bottom: 5px;
-  }
-</style>
-</head>
-<body>
-
-<div class="about-container">
-  <div class="profile-picture">
-    <img src="profile_pic.jpg" alt="Suryaprakash Uppalapati">
-  </div>
-  <div class="about-content">
-    <h2 class="about-title">About Me</h2>
-    <p class="about-description">
-      Hello! I’m Suryaprakash Uppalapati, a Computer Science graduate student with a concentration in Machine Learning at George Mason University. I have a strong passion for AI, machine learning, and data science, with hands-on experience in real-time object detection systems and ethical AI integration. I currently serve as a volunteer research assistant at the Community Informatics Lab, where I explore innovative solutions in data science.
-    </p>
-
-    <div class="skills-tools-section">
-      <div>
-        <h3 class="skills-tools-title">Skills</h3>
-        <ul class="skills-tools-list">
-          <li>Programming Languages: Python, C++, SQL</li>
-          <li>Web Development: HTML, CSS, JavaScript</li>
-          <li>Machine Learning: TensorFlow, Keras, Scikit-learn</li>
-          <li>Data Analysis: NumPy, Pandas, Matplotlib</li>
-        </ul>
+  <!-- About Section -->
+  <div class="about-container">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="profile-picture">
+          <img src="profile_pic.jpg" alt="Suryaprakash Uppalapati">
+        </div>
       </div>
-      <div>
-        <h3 class="skills-tools-title">Tools</h3>
-        <ul class="skills-tools-list">
-          <li>Jupyter Notebook, PyCharm, VS Code</li>
-          <li>AWS SageMaker, Amazon Bedrock</li>
-          <li>Power BI, Tableau</li>
-          <li>Git, SAS</li>
-        </ul>
+      <div class="col-md-8">
+        <h2 class="about-title">Who Am I?</h2>
+        <p class="about-description">
+          Hello! I’m Suryaprakash Uppalapati, a Computer Science graduate student at George Mason University specializing in Machine Learning. I’m passionate about AI, data science, and developing real-time solutions. I currently work as a Research Assistant at the Community Informatics Lab.
+        </p>
       </div>
-      <div>
-        <h3 class="skills-tools-title">Software</h3>
-        <ul class="skills-tools-list">
-          <li>MATLAB, AutoCAD</li>
-          <li>Microsoft Office Suite</li>
-        </ul>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>2024</h4>
+        <p>Joined Community Informatics Lab as a Research Assistant.</p>
       </div>
-      <div>
-        <h3 class="skills-tools-title">Domains</h3>
-        <ul class="skills-tools-list">
-          <li>Data Science</li>
-          <li>Machine Learning</li>
-          <li>Real-Time Object Detection Systems</li>
-        </ul>
+      <div class="timeline-item">
+        <h4>2023</h4>
+        <p>Started M.S. in Computer Science at George Mason University.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2022</h4>
+        <p>Developed Dynamic Object Detection System using YOLO.</p>
       </div>
     </div>
   </div>
-</div>
-
 
   <!-- Footer -->
-  <footer class="footer text-center">
+  <footer>
     <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/suryaprakash55" target="_blank">linkedin.com/in/suryaprakash55</a></p>
     <p>&copy; 2024 Suryaprakash Uppalapati</p>
   </footer>
-
- <!-- Bootstrap JS and dependencies -->
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
- <!-- JavaScript for Dark/Light Mode Toggle and Active Link -->
- <script>
-   document.addEventListener('DOMContentLoaded', function() {
-     const themeSwitcher = document.getElementById('theme-switcher');
-
-     // Add active class to current page nav link
-     const currentPage = window.location.pathname.split('/').pop();
-     const navLinks = document.querySelectorAll('.nav-link');
-     navLinks.forEach(link => {
-       link.classList.remove('active'); // Remove active class from all links
-       if (link.getAttribute('href') === currentPage) {
-         link.classList.add('active'); // Add active class to the current page link
-       }
-     });
-
-     // Load saved theme preference
-     const savedTheme = localStorage.getItem('theme');
-     if (savedTheme === 'dark') {
-       document.body.classList.add('dark');
-       themeSwitcher.checked = true;
-     } else if (savedTheme === 'light') {
-       document.body.classList.remove('dark');
-       themeSwitcher.checked = false;
-     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-       document.body.classList.add('dark');
-       themeSwitcher.checked = true;
-     } else {
-       document.body.classList.remove('dark');
-       themeSwitcher.checked = false;
-     }
-
-     // Handle toggle switch
-     themeSwitcher.addEventListener('change', function() {
-       document.body.classList.toggle('dark');
-       localStorage.setItem('theme', this.checked ? 'dark' : 'light');
-     });
-   });
- </script>
-
 </body>
 </html>
