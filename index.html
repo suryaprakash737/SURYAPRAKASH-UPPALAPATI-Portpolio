@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Suryaprakash Uppalapati Portfolio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
+  
+  <style>
+    /* Navigation link styles */
+    .nav-item .nav-link {
+      margin: 0 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-item .nav-link:hover {
+      background-color: #ff8c00;
+      color: #fff !important;
+    }
+
+    /* Active/current page highlight */
+    .nav-link.active {
+      font-weight: bold;
+      color: #fff !important;
+      background-color: #ff8c00;
+      border-radius: 20px;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #343a40; /* Keeps the dark background consistent */
+    }
+
+    /* Hero Section Styles */
+    /* Hero Section Styles */
+#hero {
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 165, 0, 0.7)), url('./homepage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the background */
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: bold;
+  color: cyan;
+}
+
+.role {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* White color for better contrast */
+  margin-bottom: 20px;
+}
+
+    /* Fallback for missing background */
+    body {
+      background-color: #282c34;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+    }
+
+    footer a {
+      color: #ff8c00;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-transition-overlay"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Suryaprakash Uppalapati</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="name">Welcome to My Portfolio</h1>
+      <p class="role">Explore my work, skills, and achievements in AI and Machine Learning.</p>
+      <a href="projects.html" class="btn btn-primary mt-3" style="padding: 10px 20px; font-size: 1.2rem;">View Projects</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/suryaprakash55" target="_blank">linkedin.com/in/suryaprakash55</a></p>
+    <p>&copy; 2024 Suryaprakash Uppalapati</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript for Active Link and Theme Toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeSwitcher = document.getElementById('theme-switcher');
+
+      // Add active class to current page nav link
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+
+      // Load saved theme preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        themeSwitcher.checked = true;
+      }
+
+      themeSwitcher.addEventListener('change', function() {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', this.checked ? 'dark' : 'light');
+      });
+    });
+  </script>
+</body>
+</html>
