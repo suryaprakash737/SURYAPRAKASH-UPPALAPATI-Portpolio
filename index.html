@@ -8,8 +8,13 @@
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
-  
+  <link rel="stylesheet" href="css/styles.css"> 
+
+
+  <!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Custom CSS -->
   <style>
     /* Navigation link styles */
     .nav-item .nav-link {
@@ -114,21 +119,23 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero">
+  <section id="hero" data-aos="fade-up">
     <div class="hero-content">
       <h1 class="name">Welcome to My Portfolio</h1>
       <p class="role">Explore my work, skills, and achievements in AI and Machine Learning.</p>
-      <a href="projects.html" class="btn btn-primary mt-3" style="padding: 10px 20px; font-size: 1.2rem;">View Projects</a>
+      <a href="projects.html" class="btn btn-primary mt-3" style="padding: 10px 20px; font-size: 1.2rem;" data-aos="zoom-in">View Projects</a>
     </div>
   </section>
+  
 
   <!-- Footer -->
-  <footer class="footer text-center">
+  <footer class="footer text-center" data-aos="fade-up">
     <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/suryaprakash55" target="_blank">linkedin.com/in/suryaprakash55</a></p>
     <p>&copy; 2024 Suryaprakash Uppalapati</p>
   </footer>
+  
+  
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -155,5 +162,16 @@
 
   </script>
   
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+      duration: 1200, // Animation duration in milliseconds
+      once: true,    // Whether animation should happen only once
+    });
+  });
+</script>
+
 </body>
 </html>

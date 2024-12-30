@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Suryaprakash Uppalapati</title>
 
+  <!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -140,51 +143,52 @@
     <p>A showcase of my work in AI, Machine Learning, and Data Science, featuring interactive visualizations and impactful solutions.</p>
   </section>
 
-  <!-- Projects Section -->
-  <section class="container py-5">
-    <div class="row">
-      <!-- Featured Project -->
-      <div class="col-md-6 mb-4">
-        <div class="card project-card">
-          <img src="mainpic.png" alt="COVID-19 Dashboard" class="card-img-top project-image">
-          <div class="card-body">
-            <h5 class="project-title">Visualising COVID-19 Dataset using Power BI</h5>
-            <p class="project-description">Developed a comprehensive COVID-19 visualization dashboard using Power BI to analyze global pandemic data, providing crucial insights into the pandemic's spread and impact.</p>
-            <a href="covid-project.html" class="btn btn-primary">Learn More</a>
+    <!-- Projects Section -->
+    <section class="container py-5">
+      <div class="row">
+        <!-- Featured Project -->
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <div class="card project-card">
+            <img src="mainpic.png" alt="COVID-19 Dashboard" class="card-img-top project-image">
+            <div class="card-body">
+              <h5 class="project-title">Visualising COVID-19 Dataset using Power BI</h5>
+              <p class="project-description">Developed a comprehensive COVID-19 visualization dashboard using Power BI to analyze global pandemic data, providing crucial insights into the pandemic's spread and impact.</p>
+              <a href="covid-project.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Other Projects -->
+        <div class="col-md-6 mb-4" data-aos="fade-right">
+          <div class="card project-card">
+            <div class="card-body">
+              <h5 class="project-title">Dynamic Object Detection System (YOLO)</h5>
+              <p class="project-description">Improved detection accuracy by 40% and reduced latency by 20% using YOLO for real-time object detection systems.</p>
+              <a href="https://github.com/suryaprakash737/ObjectDetectionUsingYOLO" target="_blank" class="btn btn-primary">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 mb-4" data-aos="fade-left">
+          <div class="card project-card">
+            <div class="card-body">
+              <h5 class="project-title">Meta Llama 2 Fine-Tuning</h5>
+              <p class="project-description">Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <div class="card project-card">
+            <div class="card-body">
+              <h5 class="project-title">AWS DeepRacer</h5>
+              <p class="project-description">Ranked 22nd in the U.S. for autonomous driving reinforcement learning competition.</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Other Projects -->
-      <div class="col-md-6 mb-4">
-        <div class="card project-card">
-          <div class="card-body">
-            <h5 class="project-title">Dynamic Object Detection System (YOLO)</h5>
-            <p class="project-description">Improved detection accuracy by 40% and reduced latency by 20% using YOLO for real-time object detection systems.</p>
-            <a href="https://github.com/suryaprakash737/ObjectDetectionUsingYOLO" target="_blank" class="btn btn-primary">View on GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card project-card">
-          <div class="card-body">
-            <h5 class="project-title">Meta Llama 2 Fine-Tuning</h5>
-            <p class="project-description">Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card project-card">
-          <div class="card-body">
-            <h5 class="project-title">AWS DeepRacer</h5>
-            <p class="project-description">Ranked 22nd in the U.S. for autonomous driving reinforcement learning competition.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  
 
  <!-- Footer -->
  <footer class="footer text-center">
@@ -212,5 +216,11 @@
       });
     });
   </script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
   </body>
 </html>

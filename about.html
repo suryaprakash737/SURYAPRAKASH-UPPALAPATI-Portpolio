@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Suryaprakash Uppalapati</title>
 
+  <!-- AOS Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -185,7 +188,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" data-aos="zoom-in">
     <div>
       <h1>About Me</h1>
       <p>Passionate about AI, Machine Learning, and Data Science</p>
@@ -193,14 +196,14 @@
   </section>
 
   <!-- About Section -->
-  <div class="about-container">
+  <div class="about-container" data-aos="fade-up">
     <div class="row">
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 text-center" data-aos="fade-right">
         <div class="profile-picture">
           <img src="profile_pic.jpg" alt="Suryaprakash Uppalapati">
         </div>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8" data-aos="fade-left">
         <h2 class="about-title">Who Am I?</h2>
         <p class="about-description">
           Hello! I’m Suryaprakash Uppalapati, a Computer Science graduate student at George Mason University specializing in Machine Learning. I’m passionate about AI, data science, and developing real-time solutions. I currently work as a Research Assistant at the Community Informatics Lab.
@@ -210,15 +213,15 @@
 
     <!-- Timeline Section -->
     <div class="timeline">
-      <div class="timeline-item">
+      <div class="timeline-item" data-aos="fade-right">
         <h4>2024</h4>
         <p>Joined Community Informatics Lab as a Research Assistant.</p>
       </div>
-      <div class="timeline-item">
+      <div class="timeline-item" data-aos="fade-left">
         <h4>2023</h4>
         <p>Started M.S. in Computer Science at George Mason University.</p>
       </div>
-      <div class="timeline-item">
+      <div class="timeline-item" data-aos="fade-right">
         <h4>2022</h4>
         <p>Developed Dynamic Object Detection System using YOLO.</p>
       </div>
@@ -226,17 +229,22 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer text-center">
+  <footer class="footer text-center" data-aos="fade-up">
     <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/suryaprakash55" target="_blank">linkedin.com/in/suryaprakash55</a></p>
     <p>&copy; 2024 Suryaprakash Uppalapati</p>
   </footer>
-  <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<!-- Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
