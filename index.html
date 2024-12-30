@@ -31,6 +31,13 @@
         background-color: #ff8c00;
         border-radius: 20px;
       }
+      .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #343a40; /* Keeps the dark background consistent */
+}
+
     </style>
     
     <!-- Add these lines just before </head> in both files -->
@@ -98,12 +105,20 @@
     </nav>
   
   <!-- Hero Section -->
-  <section id="hero" class="d-flex justify-content-center align-items-center text-center">
-    <div class="hero-content">
-      <h1 class="name">Suryaprakash Uppalapati</h1>
-      <p class="role">AI & ML Engineer | Generative AI Enthusiast</p>
-    </div>
-  </section>
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="hero" class="d-flex justify-content-center align-items-center text-center"
+         style="background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 165, 0, 0.7)), url('background.jpg');
+                background-size: cover; background-position: center; height: 100vh; color: white;">
+  <div class="hero-content">
+    <h1 class="name">Welcome to My Portfolio</h1>
+    <p class="role">Explore my work, skills, and achievements in AI and Machine Learning.</p>
+    <!-- Updated Link to Projects Page -->
+    <a href="projects.html" class="btn btn-primary mt-3" style="padding: 10px 20px; font-size: 1.2rem;">View Projects</a>
+  </div>
+</section>
+
+
 
   <!-- Footer -->
   <footer class="footer text-center">

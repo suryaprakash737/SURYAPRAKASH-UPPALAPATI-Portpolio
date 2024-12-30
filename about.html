@@ -12,53 +12,63 @@
  <link rel="stylesheet" href="css/styles.css"> <!-- Custom CSS -->
 
  <style>
-   /* Navigation link styles */
-   .nav-item .nav-link {
-     margin: 0 5px;
-     padding: 8px 15px;
-     border-radius: 20px;
-     transition: all 0.3s ease;
-   }
+  /* Navigation link styles */
+  .nav-item .nav-link {
+    margin: 0 5px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
 
-   .nav-item .nav-link:hover {
-     background-color: #ff8c00;
-     color: #fff !important;
-   }
+  .nav-item .nav-link:hover {
+    background-color: #ff8c00;
+    color: #fff !important;
+  }
 
-   /* Active/current page highlight */
-   .nav-link.active {
-     font-weight: bold;
-     color: #fff !important;
-     background-color: #ff8c00;
-     border-radius: 20px;
-   }
-   body.dark {
-  background-color: #121212;
-  color: #ffffff; /* Bright white for general text */
-}
+  /* Active/current page highlight */
+  .nav-link.active {
+    font-weight: bold;
+    color: #fff !important;
+    background-color: #ff8c00;
+    border-radius: 20px;
+  }
 
-body.dark .about-container {
-  background-color: #1e1e1e;
-  color: #ffffff; /* Bright white for text inside the container */
-}
+  /* Sticky Navbar */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #343a40; /* Keeps the dark background consistent */
+  }
 
-body.dark h2,
-body.dark h3,
-body.dark p,
-body.dark ul li {
-  color: #ffffff; /* Bright white for headings, paragraphs, and list items */
-}
+  /* Dark Mode Styles */
+  body.dark {
+    background-color: #121212;
+    color: #ffffff; /* Bright white for general text */
+  }
 
-body.dark .nav-link {
-  color: #ffffff !important; /* Bright white for navigation links */
-}
+  body.dark .about-container {
+    background-color: #1e1e1e;
+    color: #ffffff; /* Bright white for text inside the container */
+  }
 
-body.dark .footer p,
-body.dark .footer a {
-  color: #ffffff; /* Bright white for footer text */
-}
+  body.dark h2,
+  body.dark h3,
+  body.dark p,
+  body.dark ul li {
+    color: #ffffff; /* Bright white for headings, paragraphs, and list items */
+  }
 
- </style>
+  body.dark .nav-link {
+    color: #ffffff !important; /* Bright white for navigation links */
+  }
+
+  body.dark .footer p,
+  body.dark .footer a {
+    color: #ffffff; /* Bright white for footer text */
+  }
+</style>
+
 </head>
 <body>
 
