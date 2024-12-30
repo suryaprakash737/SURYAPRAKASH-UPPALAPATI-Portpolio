@@ -18,27 +18,32 @@
       color: #333;
     }
 
+    /* Sticky Navbar */
     .navbar {
-      background-color: #343a40;
       position: sticky;
       top: 0;
       z-index: 1000;
+      background-color: #343a40;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .navbar-brand {
+    .nav-item .nav-link {
+      margin: 0 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-item .nav-link:hover {
+      background-color: #ff8c00;
+      color: #fff !important;
+    }
+
+    .nav-link.active {
       font-weight: bold;
-      font-size: 1.5rem;
-      color: #ff8c00 !important;
-    }
-
-    .nav-link {
-      color: white !important;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
-
-    .nav-link:hover {
-      color: #ff8c00 !important;
+      color: #fff !important;
+      background-color: #ff8c00;
+      border-radius: 20px;
     }
 
     .header-section {
@@ -111,7 +116,7 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Suryaprakash Uppalapati</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -120,11 +125,12 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-        <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
       </ul>
     </div>
   </nav>
+
 
   <!-- Header Section -->
   <section class="header-section">
@@ -188,5 +194,20 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  <script>
+    // Add active class to the current page's navbar link
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = window.location.pathname.split('/').pop();  // Get the current page URL
+      const navLinks = document.querySelectorAll('.nav-link');  // Get all nav links
+      
+      // Loop through all nav links and add the 'active' class to the current page's link
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(currentPage)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+  </body>
 </html>
