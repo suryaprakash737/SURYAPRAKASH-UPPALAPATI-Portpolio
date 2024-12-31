@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Suryaprakash Uppalapati</title>
 
-  <!-- AOS Library -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- AOS Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
     body {
@@ -50,24 +50,23 @@
     }
 
     .header-section {
-  background: linear-gradient(to bottom right,  rgb(249, 103, 5), rgba(136, 136, 206, 0.7)); /* Light blue to orange */
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
+      background: linear-gradient(to bottom right, rgb(249, 103, 5), rgba(136, 136, 206, 0.7));
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
 
-.header-section h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
+    .header-section h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
 
-.header-section p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
+    .header-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
 
     .project-card {
       background-color: white;
@@ -130,12 +129,11 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
       </ul>
     </div>
   </nav>
-
 
   <!-- Header Section -->
   <section class="header-section">
@@ -143,84 +141,93 @@
     <p>A showcase of my work in AI, Machine Learning, and Data Science, featuring interactive visualizations and impactful solutions.</p>
   </section>
 
-    <!-- Projects Section -->
-    <section class="container py-5">
-      <div class="row">
-        <!-- Featured Project -->
-        <div class="col-md-6 mb-4" data-aos="fade-up">
-          <div class="card project-card">
-            <img src="mainpic.png" alt="COVID-19 Dashboard" class="card-img-top project-image">
-            <div class="card-body">
-              <h5 class="project-title">Visualising COVID-19 Dataset using Power BI</h5>
-              <p class="project-description">Developed a comprehensive COVID-19 visualization dashboard using Power BI to analyze global pandemic data, providing crucial insights into the pandemic's spread and impact.</p>
-              <a href="covid-project.html" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Other Projects -->
-        <div class="col-md-6 mb-4" data-aos="fade-right">
-          <div class="card project-card">
-            <div class="card-body">
-              <h5 class="project-title">Dynamic Object Detection System (YOLO)</h5>
-              <p class="project-description">Improved detection accuracy by 40% and reduced latency by 20% using YOLO for real-time object detection systems.</p>
-              <a href="https://github.com/suryaprakash737/ObjectDetectionUsingYOLO" target="_blank" class="btn btn-primary">View on GitHub</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 mb-4" data-aos="fade-left">
-          <div class="card project-card">
-            <div class="card-body">
-              <h5 class="project-title">Meta Llama 2 Fine-Tuning</h5>
-              <p class="project-description">Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</p>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 mb-4" data-aos="fade-up">
-          <div class="card project-card">
-            <div class="card-body">
-              <h5 class="project-title">AWS DeepRacer</h5>
-              <p class="project-description">Ranked 22nd in the U.S. for autonomous driving reinforcement learning competition.</p>
-            </div>
+  <!-- Projects Section -->
+  <section id="projects" class="container py-5">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <!-- Filter Buttons -->
+    <div class="text-center mb-3">
+      <button class="btn btn-outline-primary filter-button" data-filter="all">All</button>
+      <button class="btn btn-outline-secondary filter-button" data-filter="ai">AI</button>
+      <button class="btn btn-outline-success filter-button" data-filter="ml">Machine Learning</button>
+      <button class="btn btn-outline-warning filter-button" data-filter="data-analysis">Data Analysis</button>
+    </div>
+    <div class="row project-container">
+      <!-- Project 1 -->
+      <div class="col-md-4 project-item ai" data-aos="fade-up">
+        <div class="card project-card">
+          <img src="project1.jpg" class="card-img-top" alt="Dynamic Object Detection System">
+          <div class="card-body">
+            <h5 class="card-title">Dynamic Object Detection System</h5>
+            <p class="card-text">Real-time object detection using YOLO. Improved accuracy by 40%.</p>
+            <a href="https://github.com/suryaprakash737/ObjectDetectionUsingYOLO" target="_blank" class="btn btn-primary">View on GitHub</a>
           </div>
         </div>
       </div>
-    </section>
-  
 
- <!-- Footer -->
- <footer class="footer text-center">
-  <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/suryaprakash55" target="_blank">linkedin.com/in/suryaprakash55</a></p>
-  <p>&copy; 2024 Suryaprakash Uppalapati</p>
-</footer>
+      <!-- Project 2 -->
+      <div class="col-md-4 project-item ml" data-aos="fade-right">
+        <div class="card project-card">
+          <img src="project2.jpg" class="card-img-top" alt="Meta Llama 2 Fine-Tuning">
+          <div class="card-body">
+            <h5 class="card-title">Meta Llama 2 Fine-Tuning</h5>
+            <p class="card-text">Fine-tuned Llama 2 for specific domain tasks, improving response accuracy by 30%.</p>
+          </div>
+        </div>
+      </div>
 
-  <!-- Bootstrap JS and dependencies -->
+      <!-- Project 3 -->
+      <div class="col-md-4 project-item data-analysis" data-aos="fade-left">
+        <div class="card project-card">
+          <img src="project3.jpg" class="card-img-top" alt="COVID-19 Dashboard">
+          <div class="card-body">
+            <h5 class="card-title">Visualizing COVID-19 Data</h5>
+            <p class="card-text">Developed a Power BI dashboard to analyze global pandemic data.</p>
+            <a href="covid-project.html" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center" data-aos="fade-up">
+    <p>Contact: <a href="mailto:suppala6@gmu.edu">suppala6@gmu.edu</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/suryaprakash55" target="_blank">linkedin.com/in/suryaprakash55</a></p>
+    <p>&copy; 2024 Suryaprakash Uppalapati</p>
+  </footer>
+
+  <!-- JavaScript Dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // Add active class to the current page's navbar link
+    AOS.init();
+
+    // Filter Projects
     document.addEventListener('DOMContentLoaded', function () {
-      const currentPage = window.location.pathname.split('/').pop();  // Get the current page URL
-      const navLinks = document.querySelectorAll('.nav-link');  // Get all nav links
-      
-      // Loop through all nav links and add the 'active' class to the current page's link
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(currentPage)) {
-          link.classList.add('active');
-        }
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const projectItems = document.querySelectorAll('.project-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.getAttribute('data-filter');
+
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          // Filter projects
+          projectItems.forEach(item => {
+            if (filter === 'all' || item.classList.contains(filter)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
       });
     });
   </script>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-  </body>
+</body>
 </html>
