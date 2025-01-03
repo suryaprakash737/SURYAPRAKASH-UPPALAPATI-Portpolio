@@ -191,6 +191,57 @@ footer p {
     font-size: 1em; /* Further reduce role size */
   }
 }
+
+/* Tooltip Styles for Entire Timeline Item */
+.timeline-item {
+  position: relative;
+  cursor: pointer; /* Show pointer for hover effect */
+}
+
+.timeline-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%; /* Adjust tooltip position above the item */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+/* Tooltip Arrow */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show Tooltip on Hover */
+.timeline-item:hover::after,
+.timeline-item:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px); /* Adds slight upward motion */
+}
+
 /* General Styles */
 * {
   margin: 0;
